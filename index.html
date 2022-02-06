@@ -27,33 +27,33 @@
         background-color: #fff2be;
       }
 
-      header {
-        position: relative;
-        width: 100%;
-      }
-
       #logo {
         width: 20%;
         left: 0%;
         aspect-ratio: 1/1;
         position: absolute;
+        padding: 10px;
+      }
+
+      header {
+        background-image: url("babushkapic1.webp");
+        background-size: cover;
+        height: 50vh;
       }
 
       header h1 {
         display: flex;
-        background-color: #16325c;
+
         place-content: center;
-        padding: 60px;
       }
 
-      header nav ul {
+      nav ul {
         display: flex;
         flex-direction: row;
         list-style: none;
         justify-content: space-evenly;
         padding: 10px;
         background-color: #98cbcb;
-        opacity: 80%;
       }
 
       main {
@@ -75,7 +75,6 @@
 
       article {
         background-color: #98cbcb;
-        opacity: 80%;
       }
 
       footer {
@@ -85,10 +84,10 @@
 
       h1 {
         font-family: "Sansita Swashed", "Dancing Script", cursive;
-        font-size: 6rem;
+        font-size: 4.5rem;
         color: #f37042;
         text-align: center;
-        padding: 30px 160px 30px 160px;
+        padding-top: 30px;
       }
 
       h2,
@@ -99,10 +98,20 @@
 
       @media (min-width: 1250px) {
         #logo {
-          width: 17%;
+          width: 20%;
           left: 8%;
           aspect-ratio: 1/1;
           position: absolute;
+        }
+      }
+
+      @media (min-width: 1050px) {
+        h1 {
+          font-family: "Sansita Swashed", "Dancing Script", cursive;
+          font-size: 6rem;
+          color: #f37042;
+          text-align: center;
+          padding-top: 100px;
         }
       }
     </style>
@@ -110,14 +119,14 @@
   <header>
     <img id="logo" src="logo.png" alt="logo" />
     <h1>Bistro Babushka</h1>
-    <nav>
-      <ul>
-        <li>Forretter</li>
-        <li>Hovedretter</li>
-        <li>Desserter</li>
-      </ul>
-    </nav>
   </header>
+  <nav>
+    <ul>
+      <li>Forretter</li>
+      <li>Hovedretter</li>
+      <li>Desserter</li>
+    </ul>
+  </nav>
 
   <body>
     <main>
