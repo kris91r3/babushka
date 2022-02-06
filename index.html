@@ -5,14 +5,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>Document</title>
-    <style></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&family=Sansita+Swashed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Babushka</title>
+    <style>
+      img {
+        width: 100%;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fff2be;
+      }
+
+      header {
+        display: flex;
+        background-color: #16325c;
+        place-content: center;
+        padding: 60px;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+        justify-content: space-evenly;
+      }
+
+      main section {
+        grid-column: 2/3;
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 10px;
+      }
+
+      article {
+        background-color: #98cbcb;
+      }
+
+      footer {
+        background-color: #16325c;
+        padding: 30px;
+      }
+
+      h1 {
+        font-family: "Sansita Swashed", "Dancing Script", cursive;
+        font-size: 7rem;
+        color: #f37042;
+        text-align: center;
+        padding: 30px 160px 30px 160px;
+        border: 5px solid #98cbcb;
+      }
+
+      h2,
+      p {
+        font-family: "Josefin Sans", sans-serif;
+        padding: 10px;
+      }
+    </style>
   </head>
+  <header>
+    <div id="trekant_left"></div>
+    <h1>Bistro Babushka</h1>
+    <div id="trekant_right"></div>
+  </header>
   <body>
-    <section></section>
-    <template>
-      <article></article>
-    </template>
-    <script></script>
+    <main>
+      <section></section>
+      <template>
+        <article>
+          <img src="" alt="" />
+          <h2></h2>
+          <p class="kortbeskrivelse"></p>
+          <p class="pris"></p>
+        </article>
+      </template>
+    </main>
+    <footer>test</footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", start);
+
+      const container = document.querySelector("section");
+      const template = document.querySelector("template");
+
+      const url = "https://babushka-dd8a.restdb.io/rest/menu";
+      const key = "600ec2fb1346a1524ff12de4";
+      let data = [];
+
+      const options = {
+        headers: {
+          "x-apikey": key,
+        },
+      };
+
+      function start() {
+        console.log("Dom er loaded");
+      }
+
+      async function hentdata() {
+        const resultat = await fetch(url, options);
+        const json = await resultat.json();
+        vis(json);
+      }
+
+      function vis(menuer) {
+        menuer.forEach((menu) => {
+          console.log(menu);
+          let klon = template.cloneNode(true).content;
+          klon.querySelector("img").src = "jpg/" + menu.object;
+          klon.querySelector("h2").textContent = menu.kategori;
+          klon.querySelector(".kortbeskrivelse").textContent =
+            menu.kortbeskrivelse;
+          klon.querySelector(".pris").textContent = "Pris: " + menu.pris + ",-";
+          container.appendChild(klon);
+        });
+      }
+
+      hentdata();
+    </script>
   </body>
 </html>
