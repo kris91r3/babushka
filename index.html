@@ -27,6 +27,18 @@
         background-color: #fff2be;
       }
 
+      header {
+        position: relative;
+        width: 100%;
+      }
+
+      #logo {
+        width: 20%;
+        left: 0%;
+        aspect-ratio: 1/1;
+        position: absolute;
+      }
+
       header h1 {
         display: flex;
         background-color: #16325c;
@@ -72,11 +84,11 @@
 
       h1 {
         font-family: "Sansita Swashed", "Dancing Script", cursive;
-        font-size: 7rem;
+        font-size: 6rem;
         color: #f37042;
         text-align: center;
         padding: 30px 160px 30px 160px;
-        border: 5px solid #98cbcb;
+        /* border: 5px solid #98cbcb; */
       }
 
       h2,
@@ -84,9 +96,19 @@
         font-family: "Josefin Sans", sans-serif;
         padding: 10px;
       }
+
+      @media (min-width: 1350px) {
+        #logo {
+          width: 17%;
+          left: 12%;
+          aspect-ratio: 1/1;
+          position: absolute;
+        }
+      }
     </style>
   </head>
   <header>
+    <img id="logo" src="logo.png" alt="logo" />
     <h1>Bistro Babushka</h1>
     <nav>
       <ul>
@@ -140,7 +162,7 @@
         menuer.forEach((menu) => {
           console.log(menu);
           let klon = template.cloneNode(true).content;
-          klon.querySelector("img").src = "jpg/" + menu.object;
+          klon.querySelector("img").src = "medium/" + menu.object;
           klon.querySelector("h2").textContent = menu.kategori;
           klon.querySelector(".kortbeskrivelse").textContent =
             menu.kortbeskrivelse;
