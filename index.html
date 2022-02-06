@@ -53,7 +53,7 @@
         justify-content: space-evenly;
         padding: 10px;
         background-color: #98cbcb;
-        /* width: fit-content; */
+        opacity: 80%;
       }
 
       main {
@@ -75,6 +75,7 @@
 
       article {
         background-color: #98cbcb;
+        opacity: 80%;
       }
 
       footer {
@@ -88,7 +89,6 @@
         color: #f37042;
         text-align: center;
         padding: 30px 160px 30px 160px;
-        /* border: 5px solid #98cbcb; */
       }
 
       h2,
@@ -97,10 +97,10 @@
         padding: 10px;
       }
 
-      @media (min-width: 1350px) {
+      @media (min-width: 1250px) {
         #logo {
           width: 17%;
-          left: 12%;
+          left: 8%;
           aspect-ratio: 1/1;
           position: absolute;
         }
@@ -162,7 +162,7 @@
         menuer.forEach((menu) => {
           console.log(menu);
           let klon = template.cloneNode(true).content;
-          klon.querySelector("img").src = "medium/" + menu.object;
+          klon.querySelector("img").src = "billeder/" + menu.billede;
           klon.querySelector("h2").textContent = menu.kategori;
           klon.querySelector(".kortbeskrivelse").textContent =
             menu.kortbeskrivelse;
