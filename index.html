@@ -27,11 +27,21 @@
         background-color: #fff2be;
       }
 
-      header {
+      header h1 {
         display: flex;
         background-color: #16325c;
         place-content: center;
         padding: 60px;
+      }
+
+      header nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-evenly;
+        padding: 10px;
+        background-color: #98cbcb;
+        /* width: fit-content; */
       }
 
       main {
@@ -77,10 +87,16 @@
     </style>
   </head>
   <header>
-    <div id="trekant_left"></div>
     <h1>Bistro Babushka</h1>
-    <div id="trekant_right"></div>
+    <nav>
+      <ul>
+        <li>Forretter</li>
+        <li>Hovedretter</li>
+        <li>Desserter</li>
+      </ul>
+    </nav>
   </header>
+
   <body>
     <main>
       <section></section>
