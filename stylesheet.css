@@ -12,6 +12,8 @@ body {
   background-color: #fff2be;
 }
 
+/* Baggrundsbillede + h1 + logo---------------------- */
+
 #logo {
   width: 20%;
   left: 0%;
@@ -31,13 +33,12 @@ header h1 {
   place-content: center;
 }
 
+/* Navigationsmenu med knapper-------------- */
+
 nav {
   display: flex;
   flex-direction: row;
-
-  /* justify-content: space-evenly; */
   place-content: center;
-
   background-color: #f37042;
   padding: 10px;
 }
@@ -86,19 +87,26 @@ article {
   width: 100vw;
   height: 100vh;
   display: fixed;
-  background-color: #00000055;
+  background-color: #16325ce3;
 }
 
 #modal article {
   max-width: 900px;
   margin: auto;
-  background-color: white;
+  background-color: #98cbcb;
+  padding: 10px;
 }
 
 footer {
   background-color: #16325c;
   opacity: 90%;
   padding: 30px;
+}
+
+address {
+  display: block;
+  color: #98cbcb;
+  font-size: 20px;
 }
 
 h1 {
@@ -119,6 +127,7 @@ h2 {
 h3,
 p {
   font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
   padding: 10px;
 }
 
