@@ -14,28 +14,28 @@
     />
     <title>Babushka</title>
   </head>
-
-  <header>
-    <img id="logo" src="logo.png" alt="logo" />
-    <h1>Bistro Babushka</h1>
-  </header>
-
-  <button class="toggle-btn">≡</button>
-  <nav>
-    <button data-kategori="alle" class="valgt">Alle</button>
-    <button data-kategori="forretter">Foretter</button>
-    <button data-kategori="hovedretter">Hovedretter</button>
-    <button data-kategori="desserter">Desserter</button>
-    <button data-kategori="sideorders">Siderorders</button>
-    <button data-kategori="drikkevarer">Drikkevarer</button>
-  </nav>
-
   <body>
+    <header>
+      <img id="logo" src="logo.png" alt="logo" />
+      <h1>Bistro Babushka</h1>
+    </header>
+
+    <button class="toggle-btn">≡</button>
+    <nav>
+      <button data-kategori="alle" class="valgt">Alle</button>
+      <button data-kategori="forretter">Foretter</button>
+      <button data-kategori="hovedretter">Hovedretter</button>
+      <button data-kategori="desserter">Desserter</button>
+      <button data-kategori="sideorders">Siderorders</button>
+      <button data-kategori="drikkevarer">Drikkevarer</button>
+    </nav>
+
     <aside id="modal">
       <article>
-        <img src="" alt="" />
+        <!-- <button>&#x2715</button> -->
         <h3></h3>
         <p class="langbeskrivelse"></p>
+        <img src="" alt="" />
         <p class="oprindelse"></p>
       </article>
     </aside>
@@ -64,6 +64,11 @@
           <a href="mailto:loremipsum@example.com">loremipsum@example.com</a
           >.<br />
         </p>
+      </address>
+      <address>
+        <h3>Åbningstider</h3>
+        <p>Tirsdag-torsdag 16-22:<br /></p>
+        <p>Fredag-Søndag 16-23<br /></p>
       </address>
     </footer>
 
@@ -133,11 +138,13 @@
         });
       }
       function visDetaljer(menu) {
-        modal.querySelector("img").src =
-          "medium/" + menu.billednavn + "-md.jpg";
         modal.querySelector("h3").textContent = menu.navn;
+
         modal.querySelector(".langbeskrivelse").textContent =
           menu.langbeskrivelse;
+        modal.querySelector("img").src =
+          "medium/" + menu.billednavn + "-md.jpg";
+
         modal.querySelector(".oprindelse").innerHTML =
           "<b>Retten stammer fra:</b> " + menu.oprindelsesregion;
         modal.style.display = "block";

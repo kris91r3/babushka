@@ -61,6 +61,7 @@ button {
   border-radius: 15px;
   padding: 10px;
   margin: 0px 30px 0px 30px;
+  cursor: pointer;
 }
 
 /* Burgermenu knappen skjules ved større skærm---- */
@@ -92,6 +93,7 @@ section {
 
 article {
   background-color: #98cbcb;
+  cursor: pointer;
 }
 
 /* Singleview popup stylet------------- */
@@ -99,20 +101,22 @@ article {
 #modal {
   display: none;
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  /* z-index: 1; */
   display: fixed;
   background-color: #16325ce3;
 }
 
 #modal article {
-  max-width: 900px;
+  max-width: 500px;
   margin: auto;
   background-color: #98cbcb;
 }
 
-/* Footer med kontaktinfo--------- */
-
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #16325c;
   opacity: 90%;
   padding: 30px;
