@@ -15,20 +15,24 @@ body {
 /* Baggrundsbillede + h1 + logo---------------------- */
 
 #logo {
-  width: 20%;
-  left: 0%;
   aspect-ratio: 1/1;
   position: absolute;
+  top: 0;
+  left: 0;
   padding: 10px;
+  max-width: 190px;
 }
 
 header {
   background-image: url("babushkapic1.webp");
+  position: relative;
+  top: 0;
+  left: 0;
   background-size: cover;
   height: 50vh;
 }
 
-header h1 {
+header {
   display: flex;
   place-content: center;
 }
@@ -104,8 +108,9 @@ article {
   max-width: 900px;
   margin: auto;
   background-color: #98cbcb;
-  padding: 10px;
 }
+
+/* Footer med kontaktinfo--------- */
 
 footer {
   background-color: #16325c;
@@ -119,9 +124,11 @@ address {
   font-size: 20px;
 }
 
+/* Typografien--------------- */
+
 h1 {
   font-family: "Sansita Swashed", "Dancing Script", cursive;
-  font-size: 4.5rem;
+  font-size: 5rem;
   color: #f37042;
   text-align: center;
   padding-top: 30px;
@@ -146,26 +153,19 @@ p {
   padding: 10px;
 }
 
-@media (min-width: 1250px) {
-  #logo {
-    width: 20%;
-    left: 8%;
-    aspect-ratio: 1/1;
-    position: absolute;
-  }
-}
+/* Media queries---------------- */
 
-@media (min-width: 1050px) {
+@media (min-width: 600px) {
   h1 {
     font-family: "Sansita Swashed", "Dancing Script", cursive;
-    font-size: 6rem;
+    font-size: 6.5rem;
     color: #f37042;
     text-align: center;
     padding-top: 100px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .toggle-btn {
     background: transparent;
     color: #16325c;
