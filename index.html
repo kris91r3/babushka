@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="stylesheet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,137 +13,8 @@
       rel="stylesheet"
     />
     <title>Babushka</title>
-    <style>
-      img {
-        width: 100%;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: #fff2be;
-      }
-
-      #logo {
-        width: 20%;
-        left: 0%;
-        aspect-ratio: 1/1;
-        position: absolute;
-        padding: 10px;
-      }
-
-      header {
-        background-image: url("babushkapic1.webp");
-        background-size: cover;
-        height: 50vh;
-      }
-
-      header h1 {
-        display: flex;
-        place-content: center;
-      }
-
-      nav {
-        display: flex;
-        flex-direction: row;
-
-        /* justify-content: space-evenly; */
-        place-content: center;
-
-        background-color: #f37042;
-        padding: 10px;
-      }
-
-      .valgt {
-        background-color: #98cbcb;
-        opacity: 80%;
-        color: #16325c;
-      }
-
-      button {
-        font-family: "Josefin Sans", sans-serif;
-        font-size: 1.125rem;
-        background-color: #16325c;
-        color: #98cbcb;
-        border-radius: 15px;
-        padding: 10px;
-        margin: 0px 30px 0px 30px;
-      }
-
-      #menuoverskrift,
-      main {
-        display: grid;
-        grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-        justify-content: space-evenly;
-      }
-
-      #menuoverskrift h2,
-      main section {
-        grid-column: 2/3;
-      }
-
-      section {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-        margin: 10px;
-      }
-
-      article {
-        background-color: #98cbcb;
-      }
-
-      footer {
-        background-color: #16325c;
-        opacity: 90%;
-        padding: 30px;
-      }
-
-      h1 {
-        font-family: "Sansita Swashed", "Dancing Script", cursive;
-        font-size: 4.5rem;
-        color: #f37042;
-        text-align: center;
-        padding-top: 30px;
-      }
-
-      h2 {
-        font-family: "Sansita Swashed", "Dancing Script", cursive;
-        font-size: 3rem;
-        padding: 20px;
-        color: #16325c;
-      }
-
-      h3,
-      p {
-        font-family: "Josefin Sans", sans-serif;
-        padding: 10px;
-      }
-
-      @media (min-width: 1250px) {
-        #logo {
-          width: 20%;
-          left: 8%;
-          aspect-ratio: 1/1;
-          position: absolute;
-        }
-      }
-
-      @media (min-width: 1050px) {
-        h1 {
-          font-family: "Sansita Swashed", "Dancing Script", cursive;
-          font-size: 6rem;
-          color: #f37042;
-          text-align: center;
-          padding-top: 100px;
-        }
-      }
-    </style>
   </head>
+
   <header>
     <img id="logo" src="logo.png" alt="logo" />
     <h1>Bistro Babushka</h1>
@@ -160,6 +32,15 @@
     <h2>Alle</h2>
   </div>
   <body>
+    <aside id="modal">
+      <article>
+        <h2 class="billedenavn"></h2>
+        <img src="" alt="" />
+        <h3></h3>
+        <p class="oprindelse"></p>
+        <p class="langbeskrivelse"></p>
+      </article>
+    </aside>
     <main>
       <section></section>
       <template>
@@ -172,6 +53,7 @@
       </template>
     </main>
     <footer>test</footer>
+
     <script>
       document.addEventListener("DOMContentLoaded", start);
 
