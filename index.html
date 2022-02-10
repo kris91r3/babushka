@@ -32,27 +32,26 @@
 
     <aside id="modal">
       <article>
-        <!-- <button>&#x2715</button> -->
         <h3></h3>
         <p class="langbeskrivelse"></p>
         <img src="" alt="" />
         <p class="oprindelse"></p>
       </article>
     </aside>
-
     <div id="menuoverskrift">
       <h2>Alle</h2>
     </div>
     <main>
-      <section></section>
-      <template>
-        <article>
-          <img src="" alt="" />
-          <h3></h3>
-          <p class="kortbeskrivelse"></p>
-          <p class="pris"></p>
-        </article>
-      </template>
+      <section>
+        <template>
+          <article>
+            <img src="" alt="" />
+            <h3></h3>
+            <p class="kortbeskrivelse"></p>
+            <p class="pris"></p>
+          </article>
+        </template>
+      </section>
     </main>
     <footer>
       <address>
@@ -67,7 +66,7 @@
       </address>
       <address>
         <h3>Åbningstider</h3>
-        <p>Tirsdag-torsdag 16-22:<br /></p>
+        <p>Tirsdag-torsdag 16-22<br /></p>
         <p>Fredag-Søndag 16-23<br /></p>
       </address>
     </footer>
@@ -114,10 +113,12 @@
         vis(menuer);
       }
 
+      const container = document.querySelector("section");
+      const template = document.querySelector("template");
+
       function vis(menuer) {
         console.log(menuer);
-        const container = document.querySelector("section");
-        const template = document.querySelector("template");
+
         container.textContent = "";
         menuer.forEach((menu) => {
           console.log("kategori", menu.kategori);

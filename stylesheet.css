@@ -101,10 +101,10 @@ article {
 #modal {
   display: none;
   width: 100vw;
-  height: auto;
-  /* z-index: 1; */
-  display: fixed;
+  height: 100vh;
   background-color: #16325ce3;
+  position: fixed;
+  top: 0;
 }
 
 #modal article {
