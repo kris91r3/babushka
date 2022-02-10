@@ -62,6 +62,7 @@ button {
   padding: 10px;
   margin: 0px 30px 0px 30px;
   cursor: pointer;
+  width: 120px;
 }
 
 /* Burgermenu knappen skjules ved større skærm---- */
@@ -169,7 +170,7 @@ p {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .toggle-btn {
     background: transparent;
     color: #16325c;
@@ -182,16 +183,16 @@ p {
     margin: 0.5rem;
   }
 
-  button:hover {
-    color: #f37042;
-  }
-
   nav {
     display: none;
+    background-color: #f37042;
+    width: fit-content;
+    border: none;
   }
 
   nav.shown {
     border-top: 1px solid #000;
+    /* background-color: #f37042; */
     display: flex;
     flex: 1 1 100%;
     flex-flow: column;
